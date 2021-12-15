@@ -125,7 +125,6 @@ const bookingModuleSchema = new mongoose.Schema(
     net_monthly_income: { type: Number },
     self: { type: Number },
     family: { type: Number },
-    add: { type: String },
 
     //INVENTORY DETAILS
     developer_name: {
@@ -223,7 +222,11 @@ const bookingModuleSchema = new mongoose.Schema(
     brokerage: { type: Number },
     brokerage_amount: { type: Number },
 
-    //ADD++
+    //Payment Schedule
+    payment_particular:{type:String},
+    payment:{type:Number},
+    payment_amount:{type:Number},
+    payment_due_date:{type:Date},
 
     //KYC DETAILS AND VERIFICATIONS
 
@@ -242,11 +245,10 @@ const bookingModuleSchema = new mongoose.Schema(
     created_date_and_time: { type: Date },
     created_by: { type: String },
     note: { type: String },
-    add: { type: String },
 
     //ATTACHEMENTS
-    attachements_name: { type: String },
-    attachements_type: { type: String },
+    attachments_name: { type: String },
+    attachments_type: { type: String },
     created_date_and_time: { type: Date },
     created_by: { type: String },
   },

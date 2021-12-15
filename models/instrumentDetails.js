@@ -13,6 +13,7 @@ const instrumentDetalisSchema = mongoose.Schema({
   clearance_status: { type: String },
   clearance_date: { type: Date },
   attachment: { type: String }, //URL
+  total_paid_amount: { type: Number },
 });
 
 const instrumentDetails = mongoose.model(
